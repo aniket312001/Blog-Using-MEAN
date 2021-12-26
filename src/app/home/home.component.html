@@ -1,0 +1,27 @@
+<div *ngFor="let i of post.slice().reverse()">
+    
+ 
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <!-- Post preview-->
+                <div class="post-preview">
+                    <a [routerLink]="['','post',i.id]" >
+                        <h2 class="post-title">{{i.title}}</h2>
+                        <h3 class="post-subtitle">{{i.pname | slice:0:20}}...</h3>
+                    </a>
+                    <p class="post-meta">
+                        Posted by
+                        <a [routerLink]="['','user',i.user_id]">Want to know User</a>
+                        {{i.created}}
+                    </p>
+                </div>
+                <!-- Divider-->
+                <hr class="my-4" />
+                
+                <!-- Pager-->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>

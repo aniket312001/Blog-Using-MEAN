@@ -1,0 +1,15 @@
+<form [formGroup]="formValue"  (ngSubmit)="onSubmit()" class="container">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Title</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" formControlName="title">
+      
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Post</label>
+      <textarea type="text" class="form-control" id="exampleInputEmail1" formControlName="pname" rows=12></textarea>
+    </div>
+   
+    
+    <button *ngIf="r.url=='/newpost' "  type="submit" class="btn btn-primary" [disabled]="!formValue.valid">Submit</button>
+    <button *ngIf="r.url!='/newpost' "  type="submit" class="btn btn-info" [disabled]="!formValue.valid">Update</button>
+</form>

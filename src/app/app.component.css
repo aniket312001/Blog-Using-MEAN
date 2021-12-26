@@ -1,0 +1,10 @@
+.float-right{
+    margin-right: auto !important;
+}
+img{
+    width: 30px;
+    height: 35px;
+    border-radius: 30px;
+    position:absolute; right:0;
+    margin-right: 20px;
+}
